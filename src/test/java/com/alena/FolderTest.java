@@ -23,4 +23,13 @@ public class FolderTest {
         Assertions.assertEquals(154,folder.getSize());
 
     }
+    @Test
+    public void emptyFolders(){
+        Folder folder1=new Folder("1");
+        Folder folder2=new Folder("2");
+        Folder folder3=new Folder("3");
+        folder2.add(folder3);
+        folder1.add(folder2);
+        Assertions.assertEquals(0,folder1.getSize());
+    }
 }
